@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		65948BA324A3E21F00574A7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65948BA224A3E21F00574A7D /* Preview Assets.xcassets */; };
 		65948BAE24A3E21F00574A7D /* rumspielprojektTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65948BAD24A3E21F00574A7D /* rumspielprojektTests.swift */; };
 		65948BB924A3E21F00574A7D /* rumspielprojektUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65948BB824A3E21F00574A7D /* rumspielprojektUITests.swift */; };
+		65948BC824A3EA2100574A7D /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 65948BC724A3EA2100574A7D /* URLImage */; };
+		65948BCD24A3F38D00574A7D /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 65948BCC24A3F38C00574A7D /* schema.json */; };
+		65948BD224A3F61700574A7D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65948BD124A3F61700574A7D /* API.swift */; };
+		65948BD524A3F66900574A7D /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 65948BD424A3F66900574A7D /* Apollo */; };
+		65948BD724A3F66900574A7D /* ApolloCodegenLib in Frameworks */ = {isa = PBXBuildFile; productRef = 65948BD624A3F66900574A7D /* ApolloCodegenLib */; };
+		65948BDB24A3F8AC00574A7D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65948BDA24A3F8AC00574A7D /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,10 @@
 		65948BB424A3E21F00574A7D /* rumspielprojektUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rumspielprojektUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65948BB824A3E21F00574A7D /* rumspielprojektUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rumspielprojektUITests.swift; sourceTree = "<group>"; };
 		65948BBA24A3E21F00574A7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65948BCC24A3F38C00574A7D /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = rumspielprojekt/schema.json; sourceTree = "<group>"; };
+		65948BD124A3F61700574A7D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		65948BDA24A3F8AC00574A7D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		65948BDC24A3FA4400574A7D /* Pokemons.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Pokemons.graphql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65948BC824A3EA2100574A7D /* URLImage in Frameworks */,
+				65948BD724A3F66900574A7D /* ApolloCodegenLib in Frameworks */,
+				65948BD524A3F66900574A7D /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +88,7 @@
 		65948B8F24A3E21D00574A7D = {
 			isa = PBXGroup;
 			children = (
+				65948BCC24A3F38C00574A7D /* schema.json */,
 				65948B9A24A3E21D00574A7D /* rumspielprojekt */,
 				65948BAC24A3E21F00574A7D /* rumspielprojektTests */,
 				65948BB724A3E21F00574A7D /* rumspielprojektUITests */,
@@ -95,8 +109,11 @@
 		65948B9A24A3E21D00574A7D /* rumspielprojekt */ = {
 			isa = PBXGroup;
 			children = (
+				65948BDC24A3FA4400574A7D /* Pokemons.graphql */,
+				65948BD124A3F61700574A7D /* API.swift */,
 				65948B9B24A3E21D00574A7D /* rumspielprojektApp.swift */,
 				65948B9D24A3E21D00574A7D /* ContentView.swift */,
+				65948BDA24A3F8AC00574A7D /* Network.swift */,
 				65948B9F24A3E21F00574A7D /* Assets.xcassets */,
 				65948BA424A3E21F00574A7D /* Info.plist */,
 				65948BA124A3E21F00574A7D /* Preview Content */,
@@ -137,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65948BBD24A3E21F00574A7D /* Build configuration list for PBXNativeTarget "rumspielprojekt" */;
 			buildPhases = (
+				65948BD024A3F56D00574A7D /* Apollo GraphQL */,
 				65948B9424A3E21D00574A7D /* Sources */,
 				65948B9524A3E21D00574A7D /* Frameworks */,
 				65948B9624A3E21D00574A7D /* Resources */,
@@ -146,6 +164,11 @@
 			dependencies = (
 			);
 			name = rumspielprojekt;
+			packageProductDependencies = (
+				65948BC724A3EA2100574A7D /* URLImage */,
+				65948BD424A3F66900574A7D /* Apollo */,
+				65948BD624A3F66900574A7D /* ApolloCodegenLib */,
+			);
 			productName = rumspielprojekt;
 			productReference = 65948B9824A3E21D00574A7D /* rumspielprojekt.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +240,10 @@
 				Base,
 			);
 			mainGroup = 65948B8F24A3E21D00574A7D;
+			packageReferences = (
+				65948BC624A3EA2100574A7D /* XCRemoteSwiftPackageReference "url-image" */,
+				65948BD324A3F66900574A7D /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 65948B9924A3E21D00574A7D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65948BA324A3E21F00574A7D /* Preview Assets.xcassets in Resources */,
+				65948BCD24A3F38D00574A7D /* schema.json in Resources */,
 				65948BA024A3E21F00574A7D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,12 +282,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65948BD024A3F56D00574A7D /* Apollo GraphQL */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Apollo GraphQL";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${SRCROOT}\"/Codegen\nxcrun -sdk macosx swift run\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		65948B9424A3E21D00574A7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				65948B9E24A3E21D00574A7D /* ContentView.swift in Sources */,
+				65948BD224A3F61700574A7D /* API.swift in Sources */,
+				65948BDB24A3F8AC00574A7D /* Network.swift in Sources */,
 				65948B9C24A3E21D00574A7D /* rumspielprojektApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,6 +631,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		65948BC624A3EA2100574A7D /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.15;
+			};
+		};
+		65948BD324A3F66900574A7D /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.27.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		65948BC724A3EA2100574A7D /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65948BC624A3EA2100574A7D /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		65948BD424A3F66900574A7D /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65948BD324A3F66900574A7D /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		65948BD624A3F66900574A7D /* ApolloCodegenLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65948BD324A3F66900574A7D /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloCodegenLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 65948B9024A3E21D00574A7D /* Project object */;
 }
