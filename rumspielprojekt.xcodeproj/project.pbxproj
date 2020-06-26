@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		655CBE3424A63F3D00E6C033 /* AP+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655CBE3324A63F3D00E6C033 /* AP+Extensions.swift */; };
 		65948B9C24A3E21D00574A7D /* rumspielprojektApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65948B9B24A3E21D00574A7D /* rumspielprojektApp.swift */; };
 		65948B9E24A3E21D00574A7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65948B9D24A3E21D00574A7D /* ContentView.swift */; };
 		65948BA024A3E21F00574A7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65948B9F24A3E21F00574A7D /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		655CBE3324A63F3D00E6C033 /* AP+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AP+Extensions.swift"; sourceTree = "<group>"; };
 		65948B9824A3E21D00574A7D /* rumspielprojekt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rumspielprojekt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65948B9B24A3E21D00574A7D /* rumspielprojektApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rumspielprojektApp.swift; sourceTree = "<group>"; };
 		65948B9D24A3E21D00574A7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				65948BDC24A3FA4400574A7D /* Pokemons.graphql */,
 				65948BD124A3F61700574A7D /* API.swift */,
+				655CBE3324A63F3D00E6C033 /* AP+Extensions.swift */,
 				65948B9B24A3E21D00574A7D /* rumspielprojektApp.swift */,
 				65948B9D24A3E21D00574A7D /* ContentView.swift */,
 				65948BDA24A3F8AC00574A7D /* Network.swift */,
@@ -154,7 +157,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65948BBD24A3E21F00574A7D /* Build configuration list for PBXNativeTarget "rumspielprojekt" */;
 			buildPhases = (
-				65948BD024A3F56D00574A7D /* Apollo GraphQL */,
 				65948B9424A3E21D00574A7D /* Sources */,
 				65948B9524A3E21D00574A7D /* Frameworks */,
 				65948B9624A3E21D00574A7D /* Resources */,
@@ -282,27 +284,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		65948BD024A3F56D00574A7D /* Apollo GraphQL */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Apollo GraphQL";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd \"${SRCROOT}\"/Codegen\nxcrun -sdk macosx swift run\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		65948B9424A3E21D00574A7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -311,6 +292,7 @@
 				65948B9E24A3E21D00574A7D /* ContentView.swift in Sources */,
 				65948BD224A3F61700574A7D /* API.swift in Sources */,
 				65948BDB24A3F8AC00574A7D /* Network.swift in Sources */,
+				655CBE3424A63F3D00E6C033 /* AP+Extensions.swift in Sources */,
 				65948B9C24A3E21D00574A7D /* rumspielprojektApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
