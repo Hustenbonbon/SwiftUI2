@@ -7,6 +7,12 @@
 
 import Foundation
 
-extension PokemonsQuery.Data.Pokemon: Identifiable {
-    
+typealias Pokemon = PokemonsQuery.Data.Pokemon
+
+extension Pokemon: Identifiable {}
+
+extension Pokemon {
+    var imageURL: URL {
+        URL(string: image!)!
+    }
 }
