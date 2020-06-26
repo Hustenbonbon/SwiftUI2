@@ -16,14 +16,16 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            LazyHGrid(rows: [GridItem(.fixed(20))]) {
-                ForEach(pokeFetcher.pokemon, id: \.number) { pokemon in
-                    VStack {
-                        URLImage(URL(string: pokemon.image!)!).padding(.all, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                        Text(pokemon.name!).foregroundColor(.black).font(.title3)
+            ScrollView {
+                HStack(alignment: .center) {
+                    ForEach(pokeFetcher.pokemon, id: \.number) { pokemon in
+                        VStack {
+                            URLImage(URL(string: pokemon.image!)!).padding(.all, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                            Text(pokemon.name!).foregroundColor(.black).font(.title3)
+                        }
+                        .background(Color.white)
+                        .cornerRadius(20)
                     }
-                    .background(Color.white)
-                    .cornerRadius(20)
                 }
             }
         }
